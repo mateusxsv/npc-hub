@@ -1,56 +1,109 @@
-# Welcome to your Expo app 👋
+# 🎲 NPC HUB — Gerenciador de NPCs para RPG
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+O **NPC HUB** é um aplicativo mobile desenvolvido para facilitar o cadastro, a organização e o gerenciamento de NPCs (Personagens Não Jogáveis) utilizados em campanhas de RPG.
 
-## Get started
+Com ele, o mestre pode cadastrar personagens, consultar suas informações, editar seus dados e excluir registros quando necessário.
 
-1. Install dependencies
+O projeto foi desenvolvido como atividade acadêmica, utilizando React Native com Expo e consumindo uma API própria para armazenamento e gerenciamento dos dados.
 
-   ```bash
-   npm install
-   ```
+## ✨ Funcionalidades
 
-2. Start the app
+- **Cadastrar NPCs:** adicione personagens com nome, pontos de vida, descrição, campanha e categoria.
+- **Listar NPCs:** visualize todos os personagens cadastrados.
+- **Editar NPCs:** atualize as informações dos personagens existentes.
+- **Excluir NPCs:** remova personagens que não são mais necessários.
+- **Persistência de dados:** as informações são armazenadas no banco de dados através do backend.
 
-   ```bash
-   npx expo start
-   ```
+## 🛠️ Tecnologias utilizadas
 
-In the output, you'll find options to open the app in a
+- React Native
+- Expo
+- TypeScript
+- Expo Router
+- JavaScript Fetch API
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+## 📋 Pré-requisitos
 
-You can start developing by editing the files inside the **src/app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+Antes de executar o projeto, é necessário ter instalado:
 
-## Get a fresh project
+- [Node.js](https://nodejs.org/)
+- npm
+- [Expo Go](https://expo.dev/go) no celular
+- Git
 
-When you're ready, run:
+## 🚀 Como executar o projeto
+
+### 1. Clonar o repositório
 
 ```bash
-npm run reset-project
+git clone URL_DO_REPOSITORIO
 ```
 
-This command will move the starter code to the **example** directory and create a blank **src/app** directory where you can start developing.
+### 2. Entrar na pasta do projeto
 
-### Other setup steps
+```bash
+cd npc-hub
+```
 
-- To set up ESLint for linting, run `npx expo lint`, or follow our guide on ["Using ESLint and Prettier"](https://docs.expo.dev/guides/using-eslint/)
-- If you'd like to set up unit testing, follow our guide on ["Unit Testing with Jest"](https://docs.expo.dev/develop/unit-testing/)
-- Learn more about the TypeScript setup in this template in our guide on ["Using TypeScript"](https://docs.expo.dev/guides/typescript/)
+### 3. Instalar as dependências
 
-## Learn more
+```bash
+npm install
+```
 
-To learn more about developing your project with Expo, look at the following resources:
+### 4. Configurar a conexão com a API
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+Abra o arquivo:
 
-## Join the community
+```text
+constants/api.ts
+```
 
-Join our community of developers creating universal apps.
+Configure o endereço da API utilizando o endereço IPv4 do computador onde o backend está sendo executado:
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+```typescript
+const API_URL = "http://SEU_IP:3000/api/npcs";
+
+export default API_URL;
+```
+
+**Importante:** ao executar pelo Expo Go no celular, utilize o IP local do computador em vez de `localhost`. O celular e o computador devem estar conectados à mesma rede Wi-Fi.
+
+O backend também precisa estar em execução.
+
+### 5. Iniciar o aplicativo
+
+```bash
+npx expo start
+```
+
+Após iniciar, escaneie o QR Code utilizando o Expo Go no celular.
+
+## 📁 Estrutura do projeto
+
+```text
+npc-hub/
+│
+├── app/
+│   ├── _layout.tsx
+│   └── index.tsx
+│
+├── constants/
+│   └── api.ts
+│
+├── assets/
+├── package.json
+└── README.md
+```
+
+*Observação: a estrutura pode conter outros arquivos e pastas gerados pelo Expo.*
+
+## 🔗 Backend
+
+O NPC HUB utiliza uma API própria desenvolvida em Node.js, Express e MongoDB para realizar as operações de cadastro, consulta, edição e exclusão de NPCs.
+
+**Repositório do backend:** URL_DO_REPOSITORIO_BACKEND
+
+## 🎓 Projeto acadêmico
+
+Projeto desenvolvido como atividade acadêmica com o objetivo de praticar o desenvolvimento de aplicações mobile utilizando React Native, Expo e integração com APIs REST.
