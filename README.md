@@ -36,7 +36,7 @@ Antes de executar o projeto, é necessário ter instalado:
 ### 1. Clonar o repositório
 
 ```bash
-git clone https://github.com/mateusxsv/npc-hub-api.git
+git clone https://github.com/mateusxsv/npc-hub
 ```
 
 ### 2. Entrar na pasta do projeto
@@ -102,7 +102,7 @@ npc-hub/
 
 O NPC HUB utiliza uma API própria desenvolvida em Node.js, Express e MongoDB para realizar as operações de cadastro, consulta, edição e exclusão de NPCs.
 
-**Repositório do backend:** URL_DO_REPOSITORIO_BACKEND
+**Repositório do backend:** https://github.com/mateusxsv/npc-hub-api
 
 ## 🎓 Projeto acadêmico
 
